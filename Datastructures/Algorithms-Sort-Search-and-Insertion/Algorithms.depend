@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1545422470 source:c:\users\martin\desktop\algorithms\file.cpp
+	"file.hpp"
+
+1545422289 c:\users\martin\desktop\algorithms\file.hpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<ctime>
+	<cstdlib>
+
+1545421901 source:c:\users\martin\desktop\algorithms\main.cpp
+	"file.hpp"
+

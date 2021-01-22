@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1545682514 source:c:\users\martin\desktop\hsos\static_stack\main.cpp
+	"stacks.hpp"
+
+1545681695 c:\users\martin\desktop\hsos\static_stack\stacks.hpp
+	<stdio.h>
+	<iostream>
+	<ctime>
+	<stdlib.h>
+
+1545682050 source:c:\users\martin\desktop\hsos\static_stack\stacks.cpp
+	"stacks.hpp"
+
+1545682514 source:c:\users\martin\documents\github\static_stack\main.cpp
+	"stacks.hpp"
+
+1545681695 c:\users\martin\documents\github\static_stack\stacks.hpp
+	<stdio.h>
+	<iostream>
+	<ctime>
+	<stdlib.h>
+

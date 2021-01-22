@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1545880961 source:c:\users\martin\desktop\hsos\static_queue\main.cpp
+	"queuee.hpp"
+
+1545944640 c:\users\martin\desktop\hsos\static_queue\queuee.hpp
+	<stdio.h>
+	<stdlib.h>
+	<ctime>
+	<iostream>
+
+1545944668 source:c:\users\martin\desktop\hsos\static_queue\queuee.cpp
+	"queuee.hpp"
+
+1547063109 source:c:\users\martin\documents\github\static_queue\main.cpp
+	"queuee.hpp"
+
+1547062908 c:\users\martin\documents\github\static_queue\queuee.hpp
+	<stdio.h>
+	<stdlib.h>
+	<ctime>
+	<iostream>
+
+1547062962 source:c:\users\martin\documents\github\static_queue\queuee.cpp
+	"queuee.hpp"
+
