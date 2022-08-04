@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1520392661 source:c:\users\genoveva\documents\db\try1\try2palindromo\pali\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+

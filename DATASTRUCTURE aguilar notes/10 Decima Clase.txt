@@ -1,0 +1,48 @@
+10ma clase
+
+QUEUES
+
+a queue is a linear data structure where data insertion is madre on the one hand
+and the extractions on the other.
+
+capacity = n;
+size = s;
+
+the variable s indexes the next available box.
+the value of s is also the size of the queue,
+the queue is empty iff s = 0;
+the queue is full s = n;
+
+queue semantics
+
+the fundamental queue operations are the following:
+
+1. Enqueue(insertion): this operation consists in placing datum x at the end of the queue.
+this is denoted enqueue (x)
+
+2. dequeue(extraction): this operation is to remove a data from the front of the queue
+this operation
+
+3.
+
+procedure enqueue(queue: array[n], x: data)
+precondition: ¬full(queue)
+queue[queue.s] <- x
+inc(queue.s)
+
+function dequeue(queue: array[n]): data
+precondition: ¬empty(queue)
+x: data
+i: index
+x <- queue [0]
+i <- 0
+dec(queue.s)
+while i <= queue.s do
+queue[i] <- queue[i + 1]
+inc i
+end while
+return x;
+
+fuction front (queue: array[n]): data
+precondition: ¬empty(queue)
+retur queue[0]

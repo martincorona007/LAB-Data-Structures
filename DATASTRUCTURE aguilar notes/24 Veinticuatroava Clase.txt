@@ -1,0 +1,59 @@
+Simplification of the adjacency matrix
+
+Due to G is a non-directed graph, T turns out to be a symmetric matrix. that is
+every edge of G is encoded twice(remember that uv = vu).
+
+°also, due that are not loops(edges of the form vv), the main diagonal of T has 
+always zeros
+
+°so, we could reduce our representation of G to only the lower triangualar of T
+
+m <= n(n-1)/2 <n^2
+
+int n = 6;
+int T[n][n]
+
+LOWER TRIANGULAR LINEARIZATION
+
+note that for the vertex(row) i, i-1 possible connections are preserved: 0 for 1, 1 for 2
+,2 for 3,..., n-1 for n. that is, for n vertices there are 1 + 2 + ...+(n-1) possible
+connections:
+Sumatoria k = 1 hasta n-1: k = n(n-1)/2;
+
+lets call miu this number. then we can declarre an array of syze miu wth the precise 
+storage capacity
+
+suppose you want to query for a connection for the vertex i. we must count the number of
+squares contained in the lines before the row i to find it, i.e.
+1+2+...+(i-2). fo example, if i = 5 we calculate 1 + 2 + 3 = 6 lets call delta i this
+result . then:
+
+delta i = sumatoria k = 1 hasta i-2: k = (i-1)(i-2)/2;
+
+Suppse now you wnat to query the conection of the vertex i with the vertex j. then we must
+add j to delta i. we will call this indexing function of our array and denote it f(i,j):
+
+f(i,j) = delta i + j = (i-1)(i-2)/2 + j;
+
+then, make that ViVj pertenezca E if and only if E[f(i,j)] = 1.
+note that at all time i > j. for example, suppose that i = 5 and j = 3:
+
+remember that ViVj = VjVi, so if i < j, simply compute f(j,i).
+
+int f(int i, int j){
+ if(i < j) swap(i,j);
+ if(i == j) return 0;
+
+ return(i-1)*(i-2)/2+j-1;
+}
+
+bool*E = new bool[n*(n-1)/2];
+
+matriz[n][n]{
+        {0,0,1,0,1,1},
+        {0,0,0,1,0,1},
+        {1,0,0,0,1,0},
+        {0,1,0,0,1,0},
+        {1,0,1,1,0,1},
+        {1,1,0,0,1,0}
+    };

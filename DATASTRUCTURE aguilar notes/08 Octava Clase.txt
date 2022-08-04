@@ -1,0 +1,35 @@
+8va clase
+
+LINEAR DATA STRUCTURES
+a linear data structure is a finite sequence:
+
+lambda = a1,a2,a3,..., an;
+
+1- the element a1 is called the first element of the sequence.
+2- the element an es llamado el ultimo elemento de la secuencia
+3- every ai has the only successor ai+1, 1<= i <= n. only an has no successors.
+4- every ai has the only predecessor ai - 1, 1 < i <= n. only a1 has no predecessor
+5- the lenght of alfa is defined as |lambda| = n.
+
+LINEAR STRUCTURES AND ARRAYS.
+
+lambda: a1  a2  a3  ...  an-1  an
+
+array: [0][1][2] ... [n-2][n-1]
+
+Dynamic linear structures(linked lists)
+
+typedef struct snode{
+	tdata data; //core
+	snode *next;
+}node;
+
+list: [->][	[-> ][		[-> ]...[end of the list]
+
+
+
+
+
+
+
+

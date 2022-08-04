@@ -1,0 +1,37 @@
+Third class
+
+-a pointer is a variable that stores the address of another variable
+a pointer is used to indirectly access some variable, of which its tyoe and address are known
+, but not its name. This operation is called the indirection of the varible
+
+-the address that occupies a variable will be called its reference. 
+The operation bye which a pointer acquires the reference of some variable is called the
+referecing of the variable
+
+apuntadores ejem.
+"*p", "*q".
+
+the reference operator (or address operator) & (ampersand) is used to take the address of some variable
+.this value can be used to initialize a pointer
+
+int *p = &a;  <--address of the int variable a !!!con esto pides la direccion de la variable "a"
+
+INDIRECTION.
+assume a pointer p which points to some variable a. using the direction operator * (asterisk) on p,
+it is possible to access the data stored by a.
+
+int a = 21;
+int *p = &a;
+
+printf ("%i\n", *p);
+
+Resultados  p = (direccion);
+	   *p = 21;
+
+NULL POINTERS.
+A null pointer is one that is assigned with null (NULL in C or nullptr in C++), rather than a memory address
+This is a value reserved for indicating that the pointer does not points to a valid object and is equal to zero (0).
+
+int *p = NULL;
+if(p) printf("%i\n", *p);
+else printf("None\n");

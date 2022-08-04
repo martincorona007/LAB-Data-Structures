@@ -1,0 +1,81 @@
+THE REMOVAL PROBLEM
+suppose you want to remove the data x. to achieve this, a search of x must be done.
+if the node is located then you proceed to the removal. Again, we will use the
+pointers of search and support p and q.
+
+contrary to what happens with linked lists, in a binary tree each node may have
+two successors. so, it is not enough to linkq to the
+
+search removal point
+
+p,q: pointers to node
+qleft:false,true
+
+1. p<-root
+2. while p!=NULL and p^data != x do
+3.	q<-p
+4.	if x < p^.data then
+5.		p<-p^.left
+6.		qleft<-true
+7.	else
+8.		p<-p^.right
+9.		qleft<-false
+10.	end if
+11. end while
+
+post condition: if p!=NULL then p points to the node be deleted and q points to the fa
+ther of p. also qleft = tre if and only if p is the left child of q.
+
+removal cases
+
+four possible cases must be considered for the node p to be removed. to know:
+
+1. The three is empty(empty tree case, data doesn't exist)
+2. the node p is a leaf node(leaf node case).
+3. the node p has a single child node(one-child node case).
+4. the node p has two child nodes(complete node case).
+
+in adition, it must be considered the case that p is the root node of the maximal tree
+
+first case.
+1. if p^.left = null and p^.right = null then
+2.	if p = root then root = null
+3.	else if qleft = true then q^.left <-null
+4.	else q^.right <- null
+5.	end if
+6. end if
+
+second case.
+//if p is not a leaf node but it still has a null pointer then p is a one-child node
+1. if p^.left = null then// right-child node
+2.	if p = root then root = p^.right
+3.	else if qleft = true then q^.left<-p^right
+4.	else q^right<-right
+5.	end if
+6. else if p^.right = null then //left child node
+7.	if p = root then root <- p^.left
+8.	else if qleft = true then q^left <- p^.left
+9.	else q^.right <- p^.left
+10.	end if
+11. end if
+
+third case
+//p is a complete node
+1. if p= root then root <- p^.right
+2. else if qleft = true then q^.left <- p^.right
+3. else q^.right <- p^.right
+4. end if
+5. lgp <- p.right
+6. while lgp^.left != null do lgp <- lgp^.left
+7. lgp^.left<-p^.left
+
+procedure supr(root: pointer to node, x)
+precondition: the tree rooted in root is an ordered tree
+1. locate the data to be removed
+2. if the data is located then//p is pointing to the node to be removed
+3. 	if p is a leaf node then do leaf node relinking
+4. 	else if p is a one-child node then do one-child node relinking
+5. 	else if p is a complete node then do complete node relinking
+6. 	end if
+7. 	delete p
+8. end if

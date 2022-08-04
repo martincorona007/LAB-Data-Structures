@@ -1,0 +1,39 @@
+14va Clase
+
+DATA ELIMINATION
+
+suppose you want to erase the data x. to do this, a search to x must be donde.
+if the node is located, then it is erased from the list. Again, the search pointer
+and the backup pointer(p and q) will be used.
+
+a1 <= a2 <= ... <= an;
+
+Assumen an ordered list. two cases may happen:
+
+1- deletion occurs int the front of the list (x = a1)
+
+Deletion by the middle/end
+p != list;
+
+Location criteria: p != null, p^.data = x;
+ 
+Deletion algorithm
+
+procedure supr(list: pointer to node, x: data)
+precondition: the list is sorted
+precondition: ¬empty(list)(ie. list != NULL)
+p,q: pointers
+
+1. p <- list
+2. while p != NULL y p^.data < x do
+3. q <- p
+4. p <- p^.next
+5. end while
+6. if p != NULL y p^.data = x then{x was located}
+7. if p = list then {deletion at the front}
+8. list <- p^.next
+9. else{deletion at the middle}
+10. q^.next <- p^.next
+11. end if
+12. delete p
+13. end if

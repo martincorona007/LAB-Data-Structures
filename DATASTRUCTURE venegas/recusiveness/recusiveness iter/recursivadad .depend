@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1520365350 source:/home/alien/Desktop/DATASTRUCTURE/recusiveness/recursivadad /main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<stdio.h>
+
+1520436634 source:/home/alien/Desktop/DATASTRUCTURE/recusiveness/recusiveness iter/main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<string.h>
+	<stdio.h>
+

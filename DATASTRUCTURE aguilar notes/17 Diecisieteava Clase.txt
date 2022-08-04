@@ -1,0 +1,46 @@
+QUICK SORTING
+
+Assume the sequence lambda = a1a2...an.
+the quick sort algorithm is to take the variable ak for some 1 <= k <= n as a pivot valie.
+will place to its left all the smaller values than it and to its right all the major,
+making lambda artially ordered list.
+
+//induccion
+°Recurrently, the same procedure will be applied to the left sublist(the smaller sublist)
+of ak and to the right sublist(the greater sublist) this generating two partially
+ordered sublists of smaller size, ak in the middle(I).
+
+°This process will be repeated until reach(trivially ordered) sublist of size 1. then
+lambda will be ordered list(b)
+
+<= ak |ak| >=ak
+
+PROCEDURE QSORT(lambda: a1a2...an,left,right)
+i,j: indice
+pivot: phi
+
+1. pivot = a[(left + right)/2]
+2. i = left
+3. j = right
+4. do
+5. 	while a[i] < pivot do inc(i)
+6.	while pivot < a[j] do dec(j)
+7.	if i <= j then
+8.		swap(a[i], a[j])
+9.		inc(i)
+10.		dec(j)
+11.	endif
+12. while i<=j
+13.	if left < j then qsort(a1a2...an, left, j)
+14.	if i < right then qsort(a1a2...an,i,right)
+
+
+
+THE GREATEST CHILD
+at each step, if the value of some node is lower than any of its childres, 
+it exchanges
+its value with the largest of them.
+
+1,12,11 -> 12,1,11
+
+fuction maxChild(lambda: a1,a2,..., i:i):index

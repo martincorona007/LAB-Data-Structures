@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1517296409 source:c:\users\genoveva\desktop\dynamic\queue\main.cpp
+	"queue.hpp"
+
+1517273493 source:c:\users\genoveva\desktop\dynamic\queue\node.cpp
+	"node.hpp"
+
+1517273573 c:\users\genoveva\desktop\dynamic\queue\node.hpp
+	<cstdio>
+	<ctime>
+	<cstdlib>
+	<iostream>
+
+1517276465 c:\users\genoveva\desktop\dynamic\queue\queue.hpp
+	"node.hpp"
+
+1517295039 source:c:\users\genoveva\desktop\dynamic\queue\queue.cpp
+	"node.hpp"
+	"queue.hpp"
+
+1517300010 source:c:\users\martin\documents\c and c++\dynamic\queue\main.cpp
+	"queue.hpp"
+
+1517280066 c:\users\martin\documents\c and c++\dynamic\queue\queue.hpp
+	"node.hpp"
+
+1517277174 c:\users\martin\documents\c and c++\dynamic\queue\node.hpp
+	<cstdio>
+	<ctime>
+	<cstdlib>
+	<iostream>
+

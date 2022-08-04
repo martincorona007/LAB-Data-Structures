@@ -1,0 +1,13 @@
+11va Clase
+
+listas enlazadas.
+Insertion by the front(push)
+
+aux = new node;
+aux-> next = stack;
+stack = aux;
+
+extraction by the front(pop)
+aux = stack;
+stack = aux -> next;
+delete aux;

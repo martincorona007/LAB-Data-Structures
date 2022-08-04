@@ -1,0 +1,7 @@
+Heaping an array let [a1a2..an]be an n-array. we can reorder the array to make it a heap
+.this Heap is built ro the bottom up. in a incremental way, the smaller heaps are formed
+and repeatedly combined into larger heaps.
+
+observe that the smallest heap is rooted in the last inner node.to know it, we must know
+that the last node in the heap has the last inner node as parent node. so if the heap is
+size n, then the last inner nnode is calculated as:

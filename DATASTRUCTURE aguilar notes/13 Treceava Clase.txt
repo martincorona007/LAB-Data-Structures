@@ -1,0 +1,44 @@
+13va Clase
+
+ORDER
+the problem of ordering
+
+assume a set of phi such that for all alfa and beta members of phi
+if alfa != beta then any alfa < beta or beta < alfa. that is to say that all the 
+elements of phi are comparable to each other . let delta = a1a2...an
+be a finite sequence of variables with domain phi
+
+the ordering problem consists in reallocating the values of the variables a1, a2,...an
+in such a way that ai <= ai + 1 is achieved for all 1 <= i < n, making delta an ordered
+sequence:
+
+a1 <= a2 <= ... <= an;
+
+Bubble sorting
+
+Assume the list lambda =  a1a2...an and consider the pair(ai,ai+1)
+for all 1 <= i < n if ai > ai +1 we will make that ai and ai + 1 exchange their
+values, in such a wat tgat ai <= ai + 1;
+
+°since the list consists of n variables, there are n - 1 pairs of this form, namely
+(a1, a2), (a2,a3),...,(an-1, an). we will apply this exchange to each one of these pairs
+after the other in the same order as presented. at the end of this procedure the variable an
+will contain the ggreatest value in the list.
+
+°we repeat this procedure again for the pairs (a1, a2), (a2,a3),...,(an -2, an - 1).
+after this, variable an - 1 will contain the second greatest value in the list.
+
+°if we apply this procedure until the pair list is reduced to tonly pair(a1,a2), we will
+have transformed lambda in an ordered list.
+
+procedure bsort(lambda = a1a2...an)
+i,j:indice
+i- j <- 1
+2- while j < n do
+3-  i <- 0
+4-   while 1 <= n - j do (restarle 1)
+5-    if ai > ai +1 then swap(ai,ai +1)
+6-    inc(i)
+7-   end while
+8-  inc(j)
+9- end while

@@ -1,0 +1,42 @@
+DATA INSERTION
+
+procedure ins(lambda: a1, a2,..., an, x:data)
+s:indexm also denotes the size of the heap
+
+precondition s<n
+1. 	inc(s)
+2. 	as <- x
+3. 	i <- s
+4. 	while i>1 and(o) ai > father(i) do //sacar el padre es i entre 2(hijo es alrevez)
+5.   		swap(ai, a father(i))
+6.   		i <- father(i)
+7. 	end while
+
+extraccion en la evaluacion seria el dato < i *2 o el dato < i *2 +1
+
+fuction maxChild(lambda: a1a2...an, i:index):
+precondition: 
+
+1. if(i <= parent(s))//i indexes an inner node
+2. 	if right(i)> s then return left (i)//there is no right child
+3. 	if left(i) > aright(i) return left(i)//there are two children
+4. eslse  return right(i)
+
+DATA EXTRACCION
+
+fuction extraccion.(lambda a1,a2,...an): phi
+precondition: ¬empty o s > 0
+i: index
+
+1.  x <- a
+2.  a1 <- as
+3.  dec(s)
+4.  i <- 1
+5.  while i <= parent(s) and ai < maxchild(lambda, i)do
+6.     k <- maxChild(lambda, i)
+7.     swap(ai, ak)
+8.     i <- k
+9.  end while.
+10. return x; 
+ 0   1   2   3   4   5   6   7   8   9
+ 45, 39, 74, 38, 70, 3, 96, 97, 71, 65

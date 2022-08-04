@@ -1,0 +1,16 @@
+6ta clase
+
+RECURSIVENESS
+
+we shall define recursiveness as the characteristic of a system to be structurally subject to recurrent rules
+or guidelines, ie that its terms can be known by the precedents
+
+Cada elemento se puede generar apartir del anterior. Y la regla se aplica infinitamente
+se necesitan 2 cosas para poder generarse.
+
+1.Una base, es decir algo de lo cual se pueda generar el sig.
+2.Que sea inductivo, es decir que el sig elemento sea definido apartir del termino anterior.
+
+
+
+

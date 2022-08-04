@@ -1,0 +1,51 @@
+A PARTIAL ORDER (heaps)
+
+let [a1a2...an] be an n-array. we cab reorder the array to make it a heap. this heap
+is built rom the bottom up. in an incremental way, the smaller heaps are formed and
+repeatedly combined into larger heaps.
+
+observe that the smallest heap is rooted in the last inner node. to know it, we must
+know that the last node in the heap has the last inner node as parent node.
+so, if the heap is size n, then the last inner node is calculated as:
+
+parent(n) = [n/2]
+
+Heaping an array
+procedure heap(lambda)
+i,k,m: indices
+
+1. k = parent(n)
+2. while k >= 1 do
+3. 	i = k
+4. 	while i <= parent(n) do
+5. 		m = maxChild(lambda,i)
+6. 		if a[i] < a[m] then
+7. 			swap(a[i], a[m])
+8.		end if
+9.		i = m
+10.	end while
+11. 	dec(k)
+12. end while
+
+SORTING BY HEAPING
+
+Assume the list lambda:a1a2...an. if we heapify lambda, then a1 has the greatet value.
+so we can exchange values between a1 and an, this gettinh the gereatest value to the end
+of the list. now we can heap* the sub array a1a2...an-1. then we continue in this way
+until we build the last sub array.
+
+Heapsort algorithm
+procedure heapSort(lambda:a1a2...an)
+
+1. heap(lambda)
+2. k <- n
+3. while k > 1 do
+4.	swap(a[1],a[k])
+5.	i <- 1;
+6.	while i < parent(k+1) and a[i] < a[maxChild(a1a2...ak,i)]do
+7.		m <- maxChild(a1a2...ak,i)
+8.		swap(ai,am)
+9.		i = m
+10.	end while
+11.	dec(k)
+12. end while.

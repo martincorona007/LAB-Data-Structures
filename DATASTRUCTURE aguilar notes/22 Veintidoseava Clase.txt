@@ -1,0 +1,46 @@
+assume an ordered binary tree. on the left side of the root there are only smaller data
+than it, while on its right side there are only greater data. by the principle of structural
+induction (PSI) this also true for any subtree. then, we can retrieve the data in an orderly
+manner if we proceed as follows:
+
+°if the tree is empty, stop. there is no more data forehead(base).
+°otherwhise, go to the left subtree-where are the data smaller than the root
+(induction by the left).
+
+
+procedure inOrder(root: pointer to node)
+precondition: the tree rooted in root is an ordered tree
+
+1. if root = NULL then return
+2. else
+3. 	in order(root^.left)//induction by the left
+4.	process(root)
+5.	in order(root^.right)//induction bye the right
+6. end if.
+
+in order
+left,root,right
+
+pre-order
+root,left,right
+
+post-order
+left, right, root
+
+10,5,15,3,9,12,18,7,11,14.
+
+in-order:3,5,7,9,10,11,12,14,15,18
+pre-order:10,5,3,9,7,15,12,11,14,18
+post-order:3,7,9,5,11,14,12,18,15,10
+
+function search(root: pointer to node, x pertenece a phi)//false,true
+precondition: the tree rooted in root is an ordered tree
+p: pointer to node
+
+1. p <-root
+2. while p != NULL and p^.data != x do
+3. 	if x < p^data then p <- p^.left
+4.	else p<-p^.right
+5. end while
+6. if p != NULL then return true
+7. else return false

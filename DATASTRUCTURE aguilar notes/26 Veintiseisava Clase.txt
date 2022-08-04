@@ -1,0 +1,43 @@
+WEIGHTED GRAPHS
+A weighted graph is a graph in wich a number(the weight, meaning distance or cost)
+is assigned to each edge. formally, a weighted graph is a system G = (V,E,w) with a
+set of vertex V, a set of (non-directed) edges E and a function w: E -> Z called the
+weight function, which maps every edge of G to an integer number.
+
+due to we have a non-directed graph, we can use the linearization of the lower 
+triangular of the adjacency matrix T, making T(i,j) = w(vivj) if vivj e E, and 
+undefined otherwise.
+
+THE SHORTEST PATH IN WEIGHTED GRAPHS
+The shortest path problem is to find a path between two vertices u and v in a graph
+such that the sum of the weights of its constituents edges is minimized. for example
+for the weighted graph G shown below we have that P: v1v4v3v5 is the shortest path
+vi-v5, due to w(v1v4) + w(v4v3)+ w(v3v5) is the minimum weight of all v1-v5
+paths
+
+Dijkstra's algorithm preliminaries
+
+let G = (V,E,w) be a weighted graph and v0 E V the initial node. se define the
+following functions for all v E V:
+
+dist: V -> Z 
+
+says the distance between v0 and other node. initially, dist(v0) = 0 and dist(v)
+= (simbolo infinito) for any other v E V - {v0}.
+
+prev: V -> V
+
+points out the previous node of v in the path v0-v, for all v E V. initially, for all
+v E V, prev(v) = udef.
+
+(1)--3--(2)--5--(3)--2--(4)
+
+v0 = 1;		dist(3) = 8, prev(4) = 3
+
+un arreglo para cada funcion
+
+undefined = -1.
+distancia = num que nunca utilizaras.
+
+const int infty = 1000;
+const int udef

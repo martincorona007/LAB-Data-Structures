@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1522102623 source:c:\users\martin corona\documents\c and c++\database\dividefiles\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+

@@ -1,0 +1,110 @@
+12va clase
+
+QUEUES DYNAMIC IMPLEMENTACION
+insertion
+eoqueue -> next = new node;
+eoqueue = eoqueue -> next;
+
+extraction
+//
+
+THE ORDERED LIST
+ordered sequences
+assume a domain set fi such that for any alfa and beta members of fi,
+if alfa != beta then alfa < beta or beta < alfa. that is to say that all the members
+of fi are comparable each other. let delta = a1a2...an be a finite sequence of variables
+with domain on fi
+
+we say that delta is an ordered sequence
+
+iff ai <= ai + 1 for 1 <= i < n.i.e.:
+
+a1 <= a2 <= ... <= an;
+
+THE DYNAMIC ORDERED LIST
+an ordered sequence can be achieved through the ordered data insertion
+in a linked list
+
+assume an ordered liked list. there are three cases that may happen to
+insert a new data x:
+
+1-the insertion occurs bye the front of the list (x < a1).
+2-the insertion occurs bye the end of the list (x > an)
+3- the insertion ocurrs by the middle of the list
+
+LOCATION OF THE INSERTION POINT.
+
+suppose you want to add the data x. two pointer will be used to locate the
+insertion point of x: p and q.
+
+°the pointer p will be the search pointer. it will be moved along the list until
+the first data not less than x is located, or to the end of the list.
+°the pointer q will be the backup pointer. pointer q will always points to
+the last node pointed bye p before it advances to the next node.
+
+p,q: pointers
+
+1- p <- list;
+2- while p != NULL y p^.data < x do
+3- q <- p
+4- p <- p^.next
+5-end while
+
+INSERTION POINT
+insertion by the end (an < x)
+p = NULL;
+
+insertion bye the front(x <= a1)
+p = list;
+
+insertion bye the middle (ai < x <= ai + 1)
+p != NULL, P != list;
+
+ORDERED INSERTION ALGORITHM
+
+procedure ins(list: pointer to node, x: data)
+precondition: the list is sorted
+p,q,aux: pointers;
+
+1- if list = NULL then list <- node(x)
+2- else
+3-  p <- list;
+4-  while p != NULL y p^.data < x do
+5-   q <- p
+6-   p <- p^.next
+7-  end while
+8-  aux <- node(x)
+9-  if p = NULL then //insertion at the end
+10- 	q^.next <- aux
+11- else if p = list then //insert at the front
+12-     aux^.next <- list
+13- 	list <- aux
+14- else //insert in the middle
+15- 	q^.next <- aux
+16- 	aux^.next <- p
+17- end if
+18-end if
+
+TO CODE
+implement the ordered insertion algorithm
+avoiding duplicate data (use the order relation <).
+
+make your fuction returns true if the item was
+successfully inserted and false 
+
+THE SEARCH ARGORITHM
+
+this function does the search of x in an ordered linked list, if it
+is located then a reference to x is returned. otherwise,
+a null reference(NULL) is returned.
+
+fuction search(list: pointer to node, x:data): pointer to node
+precondition: the list is sorted
+p:pointer
+
+1- p <- list
+2- while p != NULL y p^.data < x do
+3- p <- p^.next
+4- end while
+5-if p != NULL y p^.data = x then return p
+6- else return NULL

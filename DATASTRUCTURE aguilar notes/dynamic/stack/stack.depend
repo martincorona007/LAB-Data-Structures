@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1517296442 source:c:\users\genoveva\desktop\dynamic\stack\main.cpp
+	"stack.hpp"
+
+1517295309 c:\users\genoveva\desktop\dynamic\stack\stack.hpp
+	"node.hpp"
+
+1517275907 c:\users\genoveva\desktop\dynamic\stack\node.hpp
+	<ctime>
+	<cstdio>
+	<iostream>
+	<cstdlib>
+
+1517276003 source:c:\users\genoveva\desktop\dynamic\stack\node.cpp
+	"node.hpp"
+
+1517296142 source:c:\users\genoveva\desktop\dynamic\stack\stack.cpp
+	"node.hpp"
+	"stack.hpp"
+
+1517300044 source:c:\users\martin\documents\c and c++\dynamic\stack\main.cpp
+	"stack.hpp"
+
+1517298910 c:\users\martin\documents\c and c++\dynamic\stack\stack.hpp
+	"node.hpp"
+
+1517279508 c:\users\martin\documents\c and c++\dynamic\stack\node.hpp
+	<ctime>
+	<cstdio>
+	<iostream>
+	<cstdlib>
+

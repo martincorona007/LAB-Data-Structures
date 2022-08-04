@@ -1,0 +1,82 @@
+GENERAL STRATEGIES FOR EXPLORATION
+vectores o pilas
+
+1. Marking. consists of placing a mark on each vertex that is visited. in this way we 
+avoid visiting the same node twice.
+
+2. storage of trajectories.. consists of storing the sequence of vertices visited. in this
+way it is possible to go back if necessary as well as remember the path walked. typically
+vectors or stacks are used to do this.
+
+3. Vertices peding on exploration. it consists of temporarily storing a collection of
+vertices waiting for analysis, tipically, sets or queues are used to do this.
+
+4. sub-structures generation. the aim is to store not the vertices but edges that are traversed
+to induce later a subgraph
+
+in-depth exploration. this technique consists of advancing in a straight way as deeply as possible
+on the structure, turning back when it is not possible to continue advancing to take an alternate path
+
+
+exploration in breadth. this consists in first exploring the periphery of the initial vertex
+and proceeding in this way with the new vertices, that is in amplitude, as long as the search
+continues.
+
+deep-first search
+
+functio DFS(G =(V,E), source, target): V*
+precondition: G is connected
+M: set of vertices-making set
+
+1. stack.push(source)
+2. M <- vacio.
+3. while ¬stack empty() do
+4.	u <- stack.top()
+5.	M <- M U {u}
+5.1	v <- barrio(u,M)
+6. 	if (existe un vertice adyacente a u y si hay alguno no marcado) then
+		(Einversa,u pertenece N(u), v no pertenece a M)
+7.		stack.push(v)
+8.		if v = target then return stack
+9.	else stack.pop()
+10. end while
+11. return stack
+
+Breadth-first Search
+
+function BFS(G = V,E), source, target): //true false
+precondition: G is connected
+M: set of vertices - marking set
+
+1. queue.enqueue(source)
+2. M <- {source}
+3. while ¬queue.empty()do
+4.	u <- queue.dequeue()
+5.	for //apunte cuaderno
+6.		if v = target then return true
+7.		queue.enqueue(v)
+8.		M <- M U {v}
+9.	end for
+10. end while
+11. return false
+//v de vecino
+THE SHORTEST PATH
+
+function SP(G = (V,E), source, target): V*
+precondition: G is connected
+M: set of vertices -making set of vertices
+E: set of edges -coverage subtree
+
+1. queue.enqueue{source}
+2. M <- {source}
+3. E <- vacio
+4. while ¬queue.empty()do
+5.	u <- queue.dequeue()
+6.	for //apunte cuaderno do
+7.		E <- E U {uv}
+8.		if v == target then return DFS((V,E'), SOURCE, TARGET)
+9.		queue.enqueue(v)
+10.		M <- M U {v}
+11.	end for
+12. end while
+13. return //apunte cuaderno

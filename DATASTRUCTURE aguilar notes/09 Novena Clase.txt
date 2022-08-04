@@ -1,0 +1,31 @@
+9na clase
+
+STACKS
+push insertion;
+pop extraction;
+top reading;
+s = size;
+n = capacity;
+se puede hacer de 2 maneras por un arreglo o por una lista enlazada.
+stack operation:
+-capacity
+-variable s indexes the first available box.
+-the value of s also says the size of the stack.
+-the stack is empty iff s = 0.
+- the stack is full iff s = n.
+
+STACK IMPLEMENTATION.
+
+procedure push(stack: array [n], x: data)
+precodition :¬full(stack)
+stack[stack.s] <- x
+inc(stack.s)
+
+function pop(stack: array[n]):data
+precondition: ¬empty(stack)
+dec(stack.s)
+return stack[stack.s]
+
+function top (stack: array[n]):data
+precondition: ¬empty(stack)
+return stack[stack.s-1]

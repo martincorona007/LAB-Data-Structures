@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1525728523 source:/home/alien/Desktop/queue/pri/main.cpp
+	<iostream>
+	<stdio.h>
+

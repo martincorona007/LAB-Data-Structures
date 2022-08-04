@@ -1,0 +1,16 @@
+5th Class
+
+POINTERS TO FUNCTIONS
+you can create pointers to functions
+to get it, it is necessary to mention the prototype of the function we want to point as shown below.
+Note the use of parentheses to associate the asterisk with the name of the declaration, with them we managed to prevent
+our declaration being interpreted as the declaration of a function that returns a pointer to type;
+
+	<type> (*<name>)(<arguments>)
+
+¡(si quieres declarar un apuntador a funcion, se necesita poner parentecis en el apuntador)!
+
+www.cplusplus.com/reference/cstdlib/qsort/
+
+void qsort (void* base, size_t num, size_t size,
+            int (*compar)(const void*,const void*));

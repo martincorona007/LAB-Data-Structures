@@ -1,0 +1,24 @@
+HEAPS ON ARRAYS
+
+a heap is a tree-based data structure that satisfies the heap property:
+
+1. the value of each inner(not-leaf) node is greater or equal/less or equal
+(max heap/min heap) to the values of their children nodes.
+
+2.is balanced (all the leafs are in the height h or h-1)
+and the leafs are all in the left side positions.
+
+A(max) heap have the following properties:
+
+°the value of the root is the greatest of all
+°A heap witn n nodes has[lg n(base 2)//balanceado] levels.
+
+*the main use of a heap is the implementation of a priority queue
+
+parent(i) = [i/2], 1 < i <= n
+
+left(i) = 2i;
+right(i) = 2i + 1;
+
+diviendo entre 2 el indice de i se obtiene el padre de los nodos
+y multiplicando se saca al hijo, todo va de izq, a derecha.

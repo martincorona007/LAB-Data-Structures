@@ -1,0 +1,48 @@
+4th Class
+
+hay un tipo de apuntador especial que ayuda a interpretar los cambios o conversion de tipo de dato
+son apuntadores de tipo void.
+
+POINTER ARITHMETIC
+
+Assume a data type 't' which requires n bytes for storage if p is a pointer of type t, then n is the shifting unit of p
+
+-suppose x is the address stored in the pointer p. then relative addresses to x can be calculated, measured in shifting
+units, through the use of the sum (+) and difference (-) operators.
+
+- the value itself of x can be increased or decreased in one shifting unit at time using the increase (++) and decrease(--)
+operators respectively
+
+REFERENCES
+
+a reference is an alias (an alternative name) for an already existing variable.
+either the variable name or the reference name may be used to refer to the variable. in the following example
+b, is a reference of a:
+
+example (ejemplo 2);
+
+a reference must be initialized during its declaration.
+
+struct indirection
+
+let s be a struct and c an element of s. Suppose further a pointer p to struct s. the elements of struct s can be
+accessed through indirection in the following way:
+
+p -> c;
+
+three different ways to access c:
+° s.c
+° p -> c
+° (*p).c
+
+DYNAMC MEMORY MANAGEMENT
+an object can be created at runtime using the c++ operator new (or the standar fuction malloc in C)
+this operation returns the reference(the address in memory) of the recently created object.
+
+this new object can only be called indirectly (i.e. through indirection).
+
+int *list = new int [10];
+
+and object that is created in this way, must be eventually destroyed using the c++
+operator deleted
+

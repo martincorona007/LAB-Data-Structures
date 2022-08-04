@@ -1,0 +1,9 @@
+First class.
+un algoritmo es un conjunto de instrucciones finitas y ordenadas con un significado especifico
+forma de denotar el tempo es t(n);
+forma de denotar los requerimientos de memoria s(n);
+
+
+O(n) Big O notation. Defines an upper bound(worst case) of an algorithm
+omega(n) Omega notation.defines a lower bound(best case) of an algorithm
+theta(n) Theta notation defines an upper and lower bound (average case) of an algorithm

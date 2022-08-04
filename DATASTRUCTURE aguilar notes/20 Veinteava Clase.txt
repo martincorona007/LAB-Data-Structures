@@ -1,0 +1,44 @@
+THE SEARCH PROBLEM
+
+Assume the list lambda= a1a2...an. and the data x pertenece phi the search problem is to
+determine if x is in lambda, that is if ak = x for some 1 <= k <= n.
+
+this search can be perfomed sequentially on lambda while it does not end.
+
+function search(lambda: a1a2...an, x pertenece phi)//false,true
+i: index
+
+1. i = 1
+2. while i <= n || a[i] < x do inc(i)
+3. return i <= n || a[i] = x
+
+
+1. i <- 1
+2. while 1 <= n do
+3. 	if a[i] = x then return true
+4.	inc(i)
+5. end while
+6. return false
+
+	   88
+	[59,87]
+    [42,26],[77,33]
+[27,33][19,12][55,66][3,32]
+
+
+function bsearch(lambda, x)//false true
+precondition lambda is an ordered list
+lower, higher,k:index
+
+1. lower <- 1
+2. higher <- n
+3. while lower <= higher do
+4. 	k <- [(lower+higher)/2]
+5.	if a[k] = x then return true
+6.	else if x < a[k] then higher <- k-1
+7.	else if x > a[k] then lower <- k+1
+8.	end if
+9. end while
+10.return false
+
+

@@ -1,0 +1,50 @@
+typedef struct snode{
+	tdata data; //core
+	snode *left;
+	snode *right;
+}node;
+
+TREES AND ORDER
+
+Assume a set phi such that for all alfa, beta pertenece phi,
+if a != then alfa < beta or beta < alfa. it means that the members of phi are pairwise
+comparable. let x = {a1,a2,...,an} be a set of variables whit domain in phi
+
+proposition: the set x can be ordered under a binary tree
+
+Assume an ordered binary tree and let r be the root. let x pertenece X be a new variable
+add in the tree. may hapen the tree is empty or not
+
+base: if the tree is empty, then let's make x the root of the tree.
+induction: if the tree is not empty, then we shall evaluate: if x < r then you must
+insert x in the left subtree of r; if x > r the must insert x in the right subtree;
+otherwhise x is already in the tree x == r;
+
+ORDERED INSERTION IN A BINARY TREE
+note that the inductive step just points to the localization o the insertion point of
+x, while in the base, x is just placed as the root of an empty tree.
+
+this procedure describes a in-deep tour through a path and can be implemented as the 
+search of the end in a linked list. then, we shall use the pointers p and q.
+
+°the pointer p will be the search poiner. it will advance in dept until the end of the
+ path is reached
+
+BINARY INSERTION ALGORITHM
+
+procedure ins(root: pointer a node, x pertenece phi)
+precondition: the tree rooted in root is an ordered tree
+
+1. if root = NULL then root <- node(x)
+2. else
+3.	p <- root
+4.	while p != NULL and p^.data != x do
+5. 		q <- p
+6.		if x < p^.data then p <- p^left
+7.		else p<- p^.right
+8.	end while
+9.	if p = NULL then
+10.		if x < q^.data then q^.left <- node(x)
+11.		else q^.right <- node(x)
+12.	end if
+13. end if
