@@ -111,8 +111,8 @@ class LinkedList{
    */
 }
 const myLinkedList = new LinkedList(10);
-myLinkedList.append(11);
-myLinkedList.append(15);
+console.log(myLinkedList.append(11));
+console.log(myLinkedList.append(15));
 //myLinkedList.prepend(4);
 //console.log(myLinkedList);
 //myLinkedList.insert(2,8);

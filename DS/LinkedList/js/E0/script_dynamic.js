@@ -38,8 +38,11 @@ class Stack {
 };
 
 let stack = new Stack()
-stack.add('one')
-stack.add('two')
-stack.add('three')
+
+console.log(stack.add('one'))
+console.log(stack.add('two'))
+console.log(stack.add('three'))
+
+console.log(stack) // two -> one
 stack.remove()
 console.log(stack) // two -> one

@@ -1,5 +1,6 @@
 
 # cpp
+g++ main.cpp node.cpp -o main
 Double-linkedlist
 E1 - stack 
 E2 - no files
@@ -7,9 +8,21 @@ E3 - some algorithms in linkedlist
 E4 - stack
 E5 - stack
 # js
-E0 - stack 
+E0 - stack linked list example
 E1 - Singly linked list ZTM
-E2 - 
+E2 - queue linked list 
 E3 - Doubly Linked List ZTM
+E4 - stack linked list ZTM
+E5 - stack linked list example
+E6 - linked list example
+E7 - Doubly Linked List example https://medium.com/fbbd/linked-lists-using-javascript-a-beginners-guide-e498709db928
+
+# java
+https://examples.javacodegeeks.com/linkedlist-java-example/
+https://examples.javacodegeeks.com/singly-linked-list-java-example/
+https://www.javacodeexamples.com/java-linkedlist-tutorial-with-examples/1611
+
+E0 - linked list using using LinkedList class 
+E1 - linked list few operations
 # ts
 E0 - linked list ZTM
