@@ -11,7 +11,7 @@ int main()
         for(int i=0;i<n;i++){
             int data=rand()%100+1;
 
-            std::cout<<" ["<<data<<"] "<<std::endl;
+            std::cout<<" "<<i<<" "<<" ["<<data<<"] "<<std::endl;
             obj.push(data);
         }
 

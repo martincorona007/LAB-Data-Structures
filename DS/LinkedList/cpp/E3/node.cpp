@@ -203,7 +203,7 @@ void node::insertFirst(int data) {
     nodeType* newNode=new nodeType;
     newNode->info=data;
     newNode->link=head;
-    head=newNode;
+    head=newNode;//update the reference
 //printf("head %i ",*head);
 //printf("new node %i ",*newNode);
 }

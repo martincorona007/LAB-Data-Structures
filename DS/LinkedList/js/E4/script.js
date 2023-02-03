@@ -48,7 +48,7 @@ myStack.peek();
 myStack.push('google');//1
 myStack.push('udemy');//2
 myStack.push('discord');//3
-console.log(myStack.peek());
+console.log("top ",myStack.peek());
 //console.log(myStack.pop());
 // myStack.pop();
 // myStack.pop();
