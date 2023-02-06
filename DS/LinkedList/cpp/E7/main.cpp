@@ -10,7 +10,7 @@ int main() {
 
     for(int i=0;i<n;i++){
         int data=rand()%100+1;
-        printf("\n Adding: %i",data);
+        printf("\n %i  Adding: %i",i,data);
         p.enqueue(data);
 
     }

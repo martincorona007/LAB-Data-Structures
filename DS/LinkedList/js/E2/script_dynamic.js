@@ -1,3 +1,9 @@
+class Node{
+  constructor(value){
+    this.value = value;
+    this.next = null;
+  }
+}
 class Queue {
   constructor() {
     this.head = null;
@@ -27,11 +33,27 @@ class Queue {
     this.length--;
     return temp.val;
   }
+  print(){
+    if(!this.length){
+      return null;
+    }
+    let current = this.head;
+    let result = '[';
+    while(current){
+      result += current.value += '|-]->';
+      current = current.next;
+    }
+    result+= 'X ';
+    return  result;
+  }
 }
 
 let queue = new Queue();
-queue.enqueue('one');
-queue.enqueue('two');
-queue.enqueue('three');
-queue.dequeue();
-console.log(queue); // two -> three
+console.log("1 ",queue.enqueue(10));
+console.log("2 ",queue.enqueue(20))
+console.log("3 ",queue.enqueue(30))
+console.log("4 ",queue.enqueue(40))
+console.log(queue.print())
+//queue.dequeue();// [10|-]->
+//console.log(queue); // two -> three
+//console.log(queue.print())

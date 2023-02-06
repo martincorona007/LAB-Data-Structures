@@ -35,14 +35,33 @@ class Stack {
     this.length--;
     return temp.val;
   }
+  print(){
+    if(!this.length){
+      return null;
+    }
+    let current = this.head;
+    let result = '[';
+    while(current){
+      result += current.val += '|-]->';
+      current = current.next;
+    }
+    result+= 'X ';
+    return  result;
+  }
 };
 
 let stack = new Stack()
 
-console.log(stack.add('one'))
-console.log(stack.add('two'))
-console.log(stack.add('three'))
+console.log(stack.add(10))
+console.log(stack.add(20))
+console.log(stack.add(30))
+console.log(stack.add(40))
+
+//console.log(stack.add('one'))
+//console.log(stack.add('two'))
+//console.log(stack.add('three'))
 
 console.log(stack) // two -> one
-stack.remove()
-console.log(stack) // two -> one
+//stack.remove()
+console.log(stack)
+console.log(stack.print()) // two -> one

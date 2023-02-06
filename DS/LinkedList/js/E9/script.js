@@ -11,6 +11,57 @@ class DoublyLinkedList{
     this.tail = null;
     this.size = 0;
   };
+  removeFromTail(){
+    if(!this.tail){
+      return null;
+    };
+    const valueToReturn = this.tail.data;
+    if(this.head === this.tail){
+      this.head = null;
+      this.tail = null;
+    }else{
+      this.tail = this.tail.prev;
+      this.tail.next = null;
+    }
+    this.size--;
+    return valueToReturn;
+  };
+  removeData(data){
+    let current = this.head;
+    let previous = null;
+    while(current !== null){
+      if(current.data === data){
+        if(!previous){
+          return this.removeFromHead();
+        }else if(!current.next){
+          return this.removeFromTail();
+        }else{
+          previous.next = current.next;
+          current.next.prev = previous;
+        };
+        this.size--;
+        return current.data;
+      };
+      previous = current;
+      current = current.next;
+    };
+    return null;
+  }
+  removeFromHead(){
+    if(!this.head){
+      return null;
+    };
+    const valueToReturn = this.head.data;
+    if(this.head === this.tail){
+      this.head = null;
+      this.tail = null;
+    }else{
+      this.head = this.head.next;
+      this.head.prev = null;
+    }
+    this.size--;
+    return valueToReturn;
+  }
   insertAt(data,index){
     if(index < 0 || index > this.size){
       return null;
@@ -76,14 +127,25 @@ class DoublyLinkedList{
     };
     return result += ' X ';
   };
-
+  getSize(){
+    return this.size;
+  }
+  isEmpty(){
+    return this.size === 0;
+  }
 }
 const doublyLinkedList = new DoublyLinkedList();
 doublyLinkedList.addToHead(3);
 doublyLinkedList.addToHead(2);
 doublyLinkedList.addToHead(7);
 doublyLinkedList.addToTail(8);
-doublyLinkedList.insertAt(4,3)
+doublyLinkedList.insertAt(4,3);
+
+console.log(doublyLinkedList.removeFromHead());
+console.log(doublyLinkedList.removeFromTail());
+console.log(doublyLinkedList.removeData(4));
 console.log(doublyLinkedList.print());
 console.log(doublyLinkedList.reversePrint());
-console.log(doublyLinkedList)
+console.log(doublyLinkedList);
+console.log(doublyLinkedList.getSize());
+console.log(doublyLinkedList.isEmpty());

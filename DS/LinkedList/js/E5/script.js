@@ -82,13 +82,13 @@ class stackUsingLL {
 }
 
 let stack = new stackUsingLL();   //creating new instance of Stack
-console.log(stack.push(1));
-console.log(stack.push(2));
-console.log(stack.push(3));
+console.log(stack.push(100));
+console.log(stack.push(46));
+console.log(stack.push(81));
 console.log(stack.peek());
 console.log(stack.isEmpty());
 console.log(stack.size());
-console.log(stack.pop());
+//console.log(stack.pop());
 console.log(stack.toArray());
 console.log(stack.size());
 stack.clear(); //Clear the stack
