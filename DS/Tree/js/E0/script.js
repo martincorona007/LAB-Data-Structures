@@ -140,8 +140,9 @@ tree.insert(20)
 tree.insert(170)
 tree.insert(15)
 tree.insert(1)
-tree.remove(170)
-JSON.stringify(traverse(tree.root))
+console.log(tree.lookup(9));
+//tree.remove(170)
+console.log(JSON.stringify(traverse(tree.root),null,2))
 
 //     9
 //  4     20
