@@ -1,3 +1,14 @@
+
+# ts
+
+# js
+  E5 Binary Heap
+  E4 Binary Heap E3 with classes
+  E3 Max Heap
+  E2 min heap
+  E1 Unknown
+  E0 Binary Heap with Min-heap
+
 #concepts
 heap: ordered binary tree
 max heap: parent > child [16,14,10,8,7,9,3,2,4,1]

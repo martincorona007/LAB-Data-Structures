@@ -20,6 +20,8 @@ E8 - linked list example
 E9 - Doubly linked list example 
 E10 - Queue linked list ZTM
 E11 - stack linked list example
+E12 - stack linked list example
+E13 - Queue linked list example
 # java
 https://examples.javacodegeeks.com/linkedlist-java-example/
 https://examples.javacodegeeks.com/singly-linked-list-java-example/

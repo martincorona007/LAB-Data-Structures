@@ -7,4 +7,5 @@
   E2 - queue using arrays 
   E3 - queue using arrays,class
   E4 - static queue example
+  E5 - static queue example
 # ts
